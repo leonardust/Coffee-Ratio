@@ -20,7 +20,7 @@ struct WaterDisplay: View {
                 .font(.system(size: 24))
 
             Text(
-                String(
+                String(format: "%.1f",
                     CalculatorViewModel.calculateGramsOfWaterTimes(
                         waterRatio: Grams(waterRatio) ?? 0.0,
                         coffee: Grams(coffee) ?? 0.0

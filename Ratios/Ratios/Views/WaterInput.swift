@@ -47,10 +47,20 @@ struct WaterInput: View {
                         .font(.system(size: 24))
                         .keyboardType(.decimalPad)
                         .onReceive(Just(amount)) { newValue in
-                            let filtered = newValue.filter { "0123456789.0".contains($0) }
-                            if filtered != newValue {
-                                self.amount = filtered
-                            }
+                            let filtered = newValue.filter { "0123456789.".contains($0) }
+                            let components = filtered.components(separatedBy: ".")
+                            if components.count > 2 {
+                                    // More than one decimal point
+                                    self.amount = String(components[0]) + "." + String(components[1])
+                                } else if let value = Double(filtered), value > 9.9 {
+                                    // Greater than 9.9
+                                    self.amount = "9.9"
+                                } else if components.count == 2 && components[1].count > 1 {
+                                    // More than one digit after decimal point
+                                    self.amount = String(components[0]) + "." + String(components[1].prefix(1))
+                                } else {
+                                    self.amount = filtered
+                                }
                         }
 
                     Text("water")

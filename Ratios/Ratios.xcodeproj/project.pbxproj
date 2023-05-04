@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1F2D1029FA4EF3009D79A6 /* CoffeeMakerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F2D0F29FA4EF3009D79A6 /* CoffeeMakerScreen.swift */; };
+		0A1F2D2329FAB5A4009D79A6 /* WaterCalculationTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F2D2229FAB5A4009D79A6 /* WaterCalculationTestData.swift */; };
+		0AD709C129FBEC660013DC18 /* WaitForElementExists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD709C029FBEC660013DC18 /* WaitForElementExists.swift */; };
 		526BD84A240771A100A24AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BD849240771A100A24AD2 /* AppDelegate.swift */; };
 		526BD84C240771A100A24AD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BD84B240771A100A24AD2 /* SceneDelegate.swift */; };
 		526BD84F240771A100A24AD2 /* Ratios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 526BD84D240771A100A24AD2 /* Ratios.xcdatamodeld */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1F2D0F29FA4EF3009D79A6 /* CoffeeMakerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMakerScreen.swift; sourceTree = "<group>"; };
+		0A1F2D2229FAB5A4009D79A6 /* WaterCalculationTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCalculationTestData.swift; sourceTree = "<group>"; };
+		0AD709C029FBEC660013DC18 /* WaitForElementExists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitForElementExists.swift; sourceTree = "<group>"; };
 		526BD846240771A100A24AD2 /* Ratios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ratios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		526BD849240771A100A24AD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		526BD84B240771A100A24AD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +100,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A1F2D0D29FA4E75009D79A6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				526BD86E240771A300A24AD2 /* RatiosUITests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		0A1F2D0E29FA4E8C009D79A6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0A1F2D0F29FA4EF3009D79A6 /* CoffeeMakerScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0A1F2D1129FA5D64009D79A6 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				0A1F2D2229FAB5A4009D79A6 /* WaterCalculationTestData.swift */,
+			);
+			name = TestData;
+			path = RatiosUITests/TestData;
+			sourceTree = SOURCE_ROOT;
+		};
+		0A1F2D1529FA5F97009D79A6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0AD709C029FBEC660013DC18 /* WaitForElementExists.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		526BD83D240771A100A24AD2 = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +191,10 @@
 		526BD86D240771A300A24AD2 /* RatiosUITests */ = {
 			isa = PBXGroup;
 			children = (
-				526BD86E240771A300A24AD2 /* RatiosUITests.swift */,
+				0A1F2D1529FA5F97009D79A6 /* Helpers */,
+				0A1F2D1129FA5D64009D79A6 /* TestData */,
+				0A1F2D0E29FA4E8C009D79A6 /* Screens */,
+				0A1F2D0D29FA4E75009D79A6 /* Tests */,
 				526BD870240771A300A24AD2 /* Info.plist */,
 			);
 			path = RatiosUITests;
@@ -224,6 +266,7 @@
 				526BD866240771A300A24AD2 /* Sources */,
 				526BD867240771A300A24AD2 /* Frameworks */,
 				526BD868240771A300A24AD2 /* Resources */,
+				0A1F2D1C29FA8A36009D79A6 /* SwiftFormat */,
 			);
 			buildRules = (
 			);
@@ -305,6 +348,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A1F2D1C29FA8A36009D79A6 /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		526BD842240771A100A24AD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -337,7 +401,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A1F2D1029FA4EF3009D79A6 /* CoffeeMakerScreen.swift in Sources */,
+				0AD709C129FBEC660013DC18 /* WaitForElementExists.swift in Sources */,
 				526BD86F240771A300A24AD2 /* RatiosUITests.swift in Sources */,
+				0A1F2D2329FAB5A4009D79A6 /* WaterCalculationTestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

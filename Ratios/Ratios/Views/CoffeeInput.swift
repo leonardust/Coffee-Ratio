@@ -31,21 +31,26 @@ struct CoffeeInput: View {
                 .multilineTextAlignment(.center)
                 .keyboardType(.decimalPad)
                 .onReceive(Just(amount)) { newValue in
+                    let filtered = newValue.filter { "0123456789".contains($0) }
                     
-                    
-                    
-                    let filtered = newValue.filter { "0123456789.0".contains($0) }
                     if filtered != newValue {
                         self.amount = filtered
+                    } else {
+                        if let value = Double(filtered), value > 99999 {
+                            let truncatedValue = String(filtered.dropLast())
+                            self.amount = truncatedValue
+                        }
+                        if filtered.starts(with: "0") && filtered.count > 1 {
+                            self.amount = String(filtered.dropFirst())
+                        }
                     }
                 }
             
-
             Text("grams")
                 .fixedSize()
                 .foregroundColor(Color("Text"))
                 .font(.system(size: 14))
-
         }
     }
 }
+

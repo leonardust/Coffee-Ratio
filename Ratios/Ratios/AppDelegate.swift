@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if CommandLine.arguments.contains("--uitesting") {
+            resetState()
+        }
         return true
     }
 
@@ -76,6 +79,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func resetState() {
+        guard let bundleIdentifier = Bundle.main.bundleIdentifier else { fatalError() }
+        UserDefaults.standard.removePersistentDomain(forName: bundleIdentifier)
     }
 
 }
