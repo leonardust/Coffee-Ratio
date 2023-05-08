@@ -3,18 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0A1F2D1029FA4EF3009D79A6 /* CoffeeMakerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F2D0F29FA4EF3009D79A6 /* CoffeeMakerScreen.swift */; };
 		0A1F2D2329FAB5A4009D79A6 /* WaterCalculationTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F2D2229FAB5A4009D79A6 /* WaterCalculationTestData.swift */; };
 		0A7CD99B2A08EC89001469E4 /* RatiosUITimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD99A2A08EC89001469E4 /* RatiosUITimerTests.swift */; };
-		0A7CD99E2A08ED96001469E4 /* UIPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD99D2A08ED96001469E4 /* UIPerformanceTests.swift */; };
 		0A7CD9A02A08EDF8001469E4 /* WaterCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD99F2A08EDF8001469E4 /* WaterCalculationTests.swift */; };
 		0A7CD9A22A08EE50001469E4 /* WaterRatioComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD9A12A08EE50001469E4 /* WaterRatioComponentTests.swift */; };
 		0A7CD9A42A08EE86001469E4 /* CoffeeInputComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD9A32A08EE86001469E4 /* CoffeeInputComponentTests.swift */; };
 		0A7CD9A72A08F044001469E4 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD9A62A08F044001469E4 /* BaseTest.swift */; };
+		0A7CD9AF2A0904A7001469E4 /* UIPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CD9AE2A0904A7001469E4 /* UIPerformanceTests.swift */; };
 		0AD709C129FBEC660013DC18 /* WaitForElementExists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD709C029FBEC660013DC18 /* WaitForElementExists.swift */; };
 		526BD84A240771A100A24AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BD849240771A100A24AD2 /* AppDelegate.swift */; };
 		526BD84C240771A100A24AD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BD84B240771A100A24AD2 /* SceneDelegate.swift */; };
@@ -55,11 +55,11 @@
 		0A1F2D0F29FA4EF3009D79A6 /* CoffeeMakerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMakerScreen.swift; sourceTree = "<group>"; };
 		0A1F2D2229FAB5A4009D79A6 /* WaterCalculationTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCalculationTestData.swift; sourceTree = "<group>"; };
 		0A7CD99A2A08EC89001469E4 /* RatiosUITimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatiosUITimerTests.swift; sourceTree = "<group>"; };
-		0A7CD99D2A08ED96001469E4 /* UIPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIPerformanceTests.swift; path = RatiosUITests/Tests/UIPerformanceTests.swift; sourceTree = SOURCE_ROOT; };
 		0A7CD99F2A08EDF8001469E4 /* WaterCalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCalculationTests.swift; sourceTree = "<group>"; };
 		0A7CD9A12A08EE50001469E4 /* WaterRatioComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRatioComponentTests.swift; sourceTree = "<group>"; };
 		0A7CD9A32A08EE86001469E4 /* CoffeeInputComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeInputComponentTests.swift; sourceTree = "<group>"; };
 		0A7CD9A62A08F044001469E4 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		0A7CD9AE2A0904A7001469E4 /* UIPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPerformanceTests.swift; sourceTree = "<group>"; };
 		0AD709C029FBEC660013DC18 /* WaitForElementExists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitForElementExists.swift; sourceTree = "<group>"; };
 		526BD846240771A100A24AD2 /* Ratios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ratios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		526BD849240771A100A24AD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		0A1F2D0D29FA4E75009D79A6 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				0A7CD99C2A08ECBB001469E4 /* RatiosUIPerformance */,
+				0A7CD99C2A08ECBB001469E4 /* UIPerformance */,
 				0A7CD9992A08EC58001469E4 /* TimerComponent */,
 				0A7CD9982A08EC4B001469E4 /* WaterCalculationComponent */,
 				0A7CD9972A08EC1F001469E4 /* WaterRatioComponent */,
@@ -180,12 +180,12 @@
 			path = TimerComponent;
 			sourceTree = "<group>";
 		};
-		0A7CD99C2A08ECBB001469E4 /* RatiosUIPerformance */ = {
+		0A7CD99C2A08ECBB001469E4 /* UIPerformance */ = {
 			isa = PBXGroup;
 			children = (
-				0A7CD99D2A08ED96001469E4 /* UIPerformanceTests.swift */,
+				0A7CD9AE2A0904A7001469E4 /* UIPerformanceTests.swift */,
 			);
-			path = RatiosUIPerformance;
+			path = UIPerformance;
 			sourceTree = "<group>";
 		};
 		526BD83D240771A100A24AD2 = {
@@ -339,8 +339,9 @@
 		526BD83E240771A100A24AD2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "John Peden";
 				TargetAttributes = {
 					526BD845240771A100A24AD2 = {
@@ -458,8 +459,8 @@
 			files = (
 				0A1F2D1029FA4EF3009D79A6 /* CoffeeMakerScreen.swift in Sources */,
 				0A7CD9A22A08EE50001469E4 /* WaterRatioComponentTests.swift in Sources */,
+				0A7CD9AF2A0904A7001469E4 /* UIPerformanceTests.swift in Sources */,
 				0AD709C129FBEC660013DC18 /* WaitForElementExists.swift in Sources */,
-				0A7CD99E2A08ED96001469E4 /* UIPerformanceTests.swift in Sources */,
 				0A7CD9A72A08F044001469E4 /* BaseTest.swift in Sources */,
 				0A7CD99B2A08EC89001469E4 /* RatiosUITimerTests.swift in Sources */,
 				0A1F2D2329FAB5A4009D79A6 /* WaterCalculationTestData.swift in Sources */,
@@ -521,6 +522,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -581,6 +583,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

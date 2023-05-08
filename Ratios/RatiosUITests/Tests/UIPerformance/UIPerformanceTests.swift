@@ -15,8 +15,3 @@ class UIPerformanceTests: BaseTest {
     }
     
 }
-
-
-
-
-
